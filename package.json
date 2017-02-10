@@ -1,0 +1,26 @@
+{
+  "name": "vue-theme-loader",
+  "version": "1.0.0",
+  "description": "A webpack loader for supporting multi-site theming with vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zephraph/vue-theme-loader.git"
+  },
+  "keywords": [
+    "webpack",
+    "loader",
+    "vue",
+    "theme",
+    "theming"
+  ],
+  "author": "zephraph <zephraph@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zephraph/vue-theme-loader/issues"
+  },
+  "homepage": "https://github.com/zephraph/vue-theme-loader#readme"
+}
