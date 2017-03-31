@@ -1,8 +1,8 @@
-<template>
+<template test="213">
   .Component
 </template>
 
-<script>
+<script abc="123">
 export default {
 }
 </script>
@@ -12,3 +12,5 @@ export default {
     color: red;
   }
 </style>
+
+<style></style>

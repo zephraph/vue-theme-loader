@@ -1,0 +1,60 @@
+exports[`test removeOtherThemes() not modify anything if theme undefined 1`] = `
+"<template test=\"213\">
+  .Component
+</template>
+
+<script abc=\"123\">
+export default {
+}
+</script>
+
+<style test=\"true\">
+  .Component {
+    color: red;
+  }
+</style>
+
+<style></style>
+"
+`;
+
+exports[`test removeOtherThemes() should remove unmatching theme 1`] = `
+"<style>
+  .doNotTouch {
+    color: red;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+"
+`;
+
+exports[`test removeStyleBlock() 1`] = `
+"<template test=\"213\">
+  .Component
+</template>
+
+<script abc=\"123\">
+export default {
+}
+</script>
+
+
+
+
+
+
+
+<style></style>
+"
+`;
