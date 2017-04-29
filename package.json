@@ -3,9 +3,31 @@
   "version": "0.0.0",
   "description": "A webpack loader for supporting multi-site theming with vue.js",
   "main": "index.js",
+  "author": "zephraph <zephraph@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zephraph/vue-theme-loader/issues"
+  },
+  "homepage": "https://github.com/zephraph/vue-theme-loader#readme",
   "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
     "test": "jest",
     "test:watch": "jest --watch"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "\\.spec\\.(ts|tsx)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
   },
   "repository": {
     "type": "git",
@@ -18,14 +40,12 @@
     "theme",
     "theming"
   ],
-  "author": "zephraph <zephraph@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/zephraph/vue-theme-loader/issues"
-  },
-  "homepage": "https://github.com/zephraph/vue-theme-loader#readme",
   "devDependencies": {
-    "jest": "^18.1.0"
+    "@types/jest": "^19.2.2",
+    "@types/node": "^7.0.14",
+    "jest": "^19.0.2",
+    "ts-jest": "^19.0.14",
+    "typescript": "^2.3.2"
   },
   "dependencies": {
     "babel-polyfill": "^6.23.0",
