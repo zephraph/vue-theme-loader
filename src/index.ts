@@ -4,12 +4,12 @@ import { getOptions } from 'loader-utils';
 export const parse = (source: string): SFCDescriptor => 
   parseComponent(source, { pad: false });
 
-export const removeStyleBlock = (source: string, styleDescriptor) => {
+export const removeStyleBlock = (source: string, styleDescriptor: SFCBlock) => {
   let start = source.lastIndexOf('<', styleDescriptor.start);
   let end = source.indexOf('>', styleDescriptor.end);
   let lines = source.slice(start, end).split('\n').length;
   return source.substring(0, start)
-    + Array(lines).map(() => '\n')
+    + Array(lines).map(() => '').join('\n')
     + source.substring(end + 1, source.length);
 }
 

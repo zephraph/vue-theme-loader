@@ -7,9 +7,17 @@ exports[`loader should only render theme 1`] = `
   }
 </style>
 
-,,,,
 
-,,,,
+
+
+
+
+
+
+
+
+
+
 "
 `;
 
@@ -91,9 +99,17 @@ exports[`removeOtherThemes() should remove unmatching theme 1`] = `
   }
 </style>
 
-,,,,
 
-,,,,
+
+
+
+
+
+
+
+
+
+
 "
 `;
 
@@ -104,7 +120,11 @@ exports[`removeStyleBlock() 1`] = `
   }
 </style>
 
-,,,,
+
+
+
+
+
 
 <style theme=\\"brand2\\">
   .headline {
