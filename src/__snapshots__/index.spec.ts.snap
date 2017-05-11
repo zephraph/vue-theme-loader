@@ -1,75 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`loader should only render theme 1`] = `
-"<style>
-  .doNotTouch {
-    color: red;
-  }
-</style>
-
-
-
-
-
-
-
-
-
-
-
-
-"
-`;
-
 exports[`parse() 1`] = `
-Object {
-  "customBlocks": Array [],
-  "script": Object {
-    "attrs": Object {
-      "abc": "123",
-    },
-    "content": "
-export default {
-}
-",
-    "end": 93,
-    "start": 70,
-    "type": "script",
-  },
-  "styles": Array [
-    Object {
-      "attrs": Object {
-        "test": "true",
-      },
-      "content": "
+"
 .Component {
   color: red;
 }
-",
-      "end": 165,
-      "start": 125,
-      "type": "style",
-    },
-    Object {
-      "attrs": Object {},
-      "content": "",
-      "end": 184,
-      "start": 184,
-      "type": "style",
-    },
-  ],
-  "template": Object {
-    "attrs": Object {
-      "test": "213",
-    },
-    "content": "
-.Component
-",
-    "end": 37,
-    "start": 21,
-    "type": "template",
-  },
-}
+"
 `;
 
 exports[`removeOtherThemes() not modify anything if theme undefined 1`] = `
@@ -99,11 +35,11 @@ exports[`removeOtherThemes() should remove unmatching theme 1`] = `
   }
 </style>
 
-
-
-
-
-
+<style theme=\\"brand1\\" scoped>
+  .headline {
+    color: blue;
+  }
+</style>
 
 
 
@@ -113,7 +49,7 @@ exports[`removeOtherThemes() should remove unmatching theme 1`] = `
 "
 `;
 
-exports[`removeStyleBlock() 1`] = `
+exports[`removeStyleBlock() should remove specified (2nd) style block 1`] = `
 "<style>
   .doNotTouch {
     color: red;
