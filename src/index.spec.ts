@@ -1,3 +1,4 @@
+import { handleOptions, LoaderOptions } from './';
 import { readFile } from './io';
 import load, {
   parse,
@@ -29,7 +30,12 @@ test('removeOtherThemes() should remove unmatching theme', async () => {
   expect(removeOtherThemes(source, 'brand1')).toMatchSnapshot();
 });
 
-// test('loader should only render theme', async () => {
-//   const source = await readFile('./fixtures/themed.vue');
-//   expect(load(source, { theme: 'brand1'})).toMatchSnapshot();
-// })
+test('handleOptions() expect default state to be no theme with devMode enabled', async () => {
+  const options = { theme: '', devMode: true };
+  const fakeLoader = (context: LoaderOptions) => context;
+
+  expect(handleOptions(options, fakeLoader)).toEqual({
+    theme: '',
+    devMode: true
+  });
+});

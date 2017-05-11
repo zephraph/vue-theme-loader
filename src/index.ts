@@ -36,20 +36,33 @@ export const removeOtherThemes = (source: string, theme?: string): string => {
 };
 
 export interface LoaderOptions {
-  theme: string;
-  devMode: boolean;
+  theme?: string;
+  devMode?: boolean;
 }
 
+/**
+ * This function uses the getOptions method of loader-utils to grab the
+ * loader options and perform whatever logic needs to happen before passing
+ * it on to the loader itself.
+ *
+ * @param loaderContext The loader instance
+ */
+export const handleOptions = (loaderContext: LoaderOptions, loadOptions = getOptions): LoaderOptions => {
+  const options = loadOptions<LoaderOptions>(loaderContext) || {};
+
+  const devMode = options.devMode === undefined
+    ? process.env.NODE_ENV !== 'production'
+    : options.devMode;
+
+  return {
+    theme: options.theme,
+    devMode
+  };
+};
+
 export default function vueThemeLoader(this: LoaderOptions, source: string, options?: LoaderOptions) {
-  const specifiedOpts = options || getOptions<LoaderOptions>(this);
-  let theme;
-  let devMode;
 
-  if (specifiedOpts) {
-    ({ theme, devMode } = specifiedOpts);
-  }
-
-  devMode = devMode || process.env.NODE_ENV !== 'production';
+  const { devMode, theme } = handleOptions(this);
 
   return devMode
     ? source
