@@ -13,7 +13,8 @@
     "build": "tsc",
     "build:watch": "tsc --watch",
     "test": "jest",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "lint": "tslint"
   },
   "jest": {
     "transform": {
@@ -38,10 +39,11 @@
     "theming"
   ],
   "devDependencies": {
-    "@types/jest": "^19.2.2",
+    "@types/jest": "^19.2.3",
     "@types/node": "^7.0.14",
-    "jest": "^19.0.2",
-    "ts-jest": "^19.0.14",
+    "jest": "^20.0.0",
+    "ts-jest": "^20.0.3",
+    "tslint": "^5.2.0",
     "typescript": "^2.3.2"
   },
   "dependencies": {
