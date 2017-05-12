@@ -1,6 +1,10 @@
 import { parseComponent, SFCBlock, SFCDescriptor } from 'vue-template-compiler';
 import { getOptions } from 'loader-utils';
 
+/**
+ * Takes the contents of a Single File Component (SFC) and transforms it
+ * into a "descriptor" object. See global.d.ts in the root for that definition.
+ */
 export const parse = (source: string): SFCDescriptor =>
   parseComponent(source, { pad: false });
 
@@ -35,13 +39,25 @@ export const removeOtherThemes = (source: string, theme?: string): string => {
   return source;
 };
 
+/**
+ * The possible options to be provided to the loader
+ */
 export interface LoaderOptions {
   theme?: string;
-  devMode?: boolean;
 }
 
+/**
+ * The entry point for the loader. Interested in learning more about writing loaders?
+ * See the docs! https://webpack.js.org/development/how-to-write-a-loader/
+ *
+ * The "this" argument below is a typescript construct. It's a way to define
+ * the type of "this" in the context of the given function. The given usage
+ * is correct to the actual representation of the context, but it satisfies
+ * getOptions so that's all I was concerned with.
+ */
 export default function vueThemeLoader(this: LoaderOptions, source: string) {
 
+  // getOptions from loader-utils must be used to get loader options
   const { theme = '' } = getOptions<LoaderOptions>(this) || {};
 
   return removeOtherThemes(source, theme);
