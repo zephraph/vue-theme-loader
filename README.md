@@ -1,8 +1,6 @@
 # vue-theme-loader
 A webpack loader for supporting multi-site theming with Vue.js
 
-**This software is PRE-ALPHA. It likely doesn't even work. Poke around at your own risk.**
-
 *Before*
 
 ```vue
