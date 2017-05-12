@@ -29,3 +29,8 @@ test('removeOtherThemes() should remove unmatching theme', async () => {
   const source = await readFile('./fixtures/themed.vue');
   expect(removeOtherThemes(source, 'brand1')).toMatchSnapshot();
 });
+
+test('removeOtherThemes() should remove all other unmatching themes', async () => {
+  const source = await readFile('./fixtures/more-themes.vue');
+  expect(removeOtherThemes(source, 'brand1')).toMatchSnapshot();
+});

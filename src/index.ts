@@ -29,7 +29,7 @@ export const removeOtherThemes = (source: string, theme?: string): string => {
 
   for (const style of styles) {
       if (style.attrs.theme && style.attrs.theme !== theme) {
-        return removeStyleBlock(source, style);
+        return removeOtherThemes(removeStyleBlock(source, style), theme);
       }
   }
   return source;

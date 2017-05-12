@@ -28,6 +28,35 @@ export default {
 "
 `;
 
+exports[`removeOtherThemes() should remove all other unmatching themes 1`] = `
+"<style>
+  .doNotTouch {
+    color: red;
+  }
+</style>
+
+<style theme=\\"brand1\\" scoped>
+  .headline {
+    color: blue;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+"
+`;
+
 exports[`removeOtherThemes() should remove unmatching theme 1`] = `
 "<style>
   .doNotTouch {
