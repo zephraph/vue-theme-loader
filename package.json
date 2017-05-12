@@ -55,10 +55,13 @@
     "np": "^2.14.1",
     "ts-jest": "^20.0.3",
     "tslint": "^5.2.0",
-    "typescript": "^2.3.2"
+    "typescript": "^2.3.2",
+    "vue-template-compiler": "^2.2.0"
   },
   "dependencies": {
-    "loader-utils": "^1.1.0",
-    "vue-template-compiler": "^2.2.6"
+    "loader-utils": "^1.1.0"
+  },
+  "peerDependencies": {
+    "vue-template-compiler": "^2.2.0"
   }
 }
