@@ -12,3 +12,5 @@ deploy:
     branch: master
     tags: true
     repo: zephraph/vue-theme-loader
+script: 
+  - yarn build
