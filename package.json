@@ -14,7 +14,8 @@
     "build:watch": "tsc --watch",
     "test": "jest",
     "test:watch": "jest --watch",
-    "lint": "tslint"
+    "lint": "tslint",
+    "release": "np --no-publish"
   },
   "jest": {
     "transform": {
@@ -42,6 +43,7 @@
     "@types/jest": "^19.2.3",
     "@types/node": "^7.0.14",
     "jest": "^20.0.0",
+    "np": "^2.14.1",
     "ts-jest": "^20.0.3",
     "tslint": "^5.2.0",
     "typescript": "^2.3.2"

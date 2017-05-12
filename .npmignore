@@ -1,0 +1,4 @@
+fixtures
+src
+.travis.yml
+tslint.json
