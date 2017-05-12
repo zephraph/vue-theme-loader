@@ -45,7 +45,7 @@ A webpack loader for supporting multi-site theming with Vue.js
 
 ## Configuring webpack
 
-It's important to remember that webpack resolves loaders from right to left so `vue-theme-loader` must always go under `vue-loader. 
+It's important to remember that webpack resolves loaders from right to left so `vue-theme-loader` must always go under `vue-loader`. 
 
 ```js
 module.exports = {
