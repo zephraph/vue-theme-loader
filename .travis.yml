@@ -13,4 +13,6 @@ deploy:
     tags: true
     repo: zephraph/vue-theme-loader
 script: 
+  - yarn lint
   - yarn build
+  - yarn test
