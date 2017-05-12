@@ -52,7 +52,7 @@ export interface LoaderOptions {
  *
  * The "this" argument below is a typescript construct. It's a way to define
  * the type of "this" in the context of the given function. The given usage
- * is correct to the actual representation of the context, but it satisfies
+ * isn't correct to the actual representation of the context, but it satisfies
  * getOptions so that's all I was concerned with.
  */
 export default function vueThemeLoader(this: LoaderOptions, source: string) {
