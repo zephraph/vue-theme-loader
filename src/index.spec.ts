@@ -17,7 +17,7 @@ test('parse()', async () => {
 
 test('removeStyleBlock() should remove specified (2nd) style block', async () => {
   const source = await readFile('./fixtures/themed.vue');
-  expect(removeStyleBlock(source, parse(source).styles[1])).toMatchSnapshot()
+  expect(removeStyleBlock(source, parse(source).styles[1])).toMatchSnapshot();
 });
 
 test('removeOtherThemes() not modify anything if theme undefined', async () => {
