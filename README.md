@@ -1,6 +1,10 @@
 # vue-theme-loader
 A webpack loader for supporting multi-site theming with Vue.js
 
+Give styleblocks in Vue's single file components a theme attribute. Specify which theme you want to build for via an option to `vue-theme-loader`. All other unmatching themed style blocks will be removed. 
+
+In this example there is one non-themed block and two themed. Setting the theme option to `brand1` removes the `brand2` themed styleblock.
+
 *Before*
 
 ```vue
