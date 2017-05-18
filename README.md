@@ -64,7 +64,7 @@ module.exports = {
           { 
             loader: 'vue-theme-loader',
             options: {
-              theme: 'test1'
+              theme: 'brand1'
             }
           }
         ]
