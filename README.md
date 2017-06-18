@@ -1,4 +1,6 @@
 # vue-theme-loader
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/zephraph/vue-theme-loader.svg)](https://greenkeeper.io/)
 A webpack loader for supporting multi-site theming with Vue.js
 
 Give styleblocks in Vue's single file components a theme attribute. Specify which theme you want to build for via an option to `vue-theme-loader`. All other unmatching themed style blocks will be removed. 
