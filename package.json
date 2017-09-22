@@ -47,7 +47,7 @@
     "theming"
   ],
   "devDependencies": {
-    "@types/jest": "^20.0.0",
+    "@types/jest": "^21.1.0",
     "@types/node": "^8.0.0",
     "husky": "^0.14.0",
     "jest": "^21.0.0",
