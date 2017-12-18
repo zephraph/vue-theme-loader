@@ -53,7 +53,7 @@
     "jest": "^21.0.0",
     "lint-staged": "^6.0.0",
     "np": "^2.14.1",
-    "ts-jest": "^21.0.0",
+    "ts-jest": "^22.0.0",
     "tslint": "^5.2.0",
     "typescript": "^2.3.2",
     "vue-template-compiler": "^2.2.0"
