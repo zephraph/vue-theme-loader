@@ -15,7 +15,7 @@ export const parse = (source: string): SFCDescriptor =>
  * Note that whitespace is preserved for debugging purposes
  */
 export const removeStyleBlock = (source: string, styleDescriptor: SFCBlock): string => {
-  const start = source.lastIndexOf('<', styleDescriptor.start + 1);
+  const start = source.lastIndexOf('<', styleDescriptor.start - 1);
   const end = source.indexOf('>', styleDescriptor.end);
   const lines = source.slice(start, end).split('\n').length;
   return source.substring(0, start)
