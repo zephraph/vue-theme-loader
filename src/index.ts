@@ -15,7 +15,7 @@ export const parse = (source: string): SFCDescriptor =>
  * Note that whitespace is preserved for debugging purposes
  */
 export const removeStyleBlock = (source: string, styleDescriptor: SFCBlock): string => {
-  const start = source.lastIndexOf('<', styleDescriptor.start);
+  const start = source.lastIndexOf('<', styleDescriptor.start + 1);
   const end = source.indexOf('>', styleDescriptor.end);
   const lines = source.slice(start, end).split('\n').length;
   return source.substring(0, start)
@@ -56,7 +56,6 @@ export interface LoaderOptions {
  * getOptions so that's all I was concerned with.
  */
 export default function vueThemeLoader(this: LoaderOptions, source: string) {
-
   // getOptions from loader-utils must be used to get loader options
   const { theme = '' } = getOptions<LoaderOptions>(this) || {};
 

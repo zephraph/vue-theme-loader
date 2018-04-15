@@ -1,38 +1,38 @@
-declare module "loader-utils" {
+declare module 'loader-utils' {
     export function getOptions<T>(loaderContext: T): T | null;
 }
 
-declare module "vue-template-compiler" {
+declare module 'vue-template-compiler' {
 
-    export type SFCDescriptor = {
+    export interface SFCDescriptor {
         template?: SFCBlock;
         script?: SFCBlock;
         styles: SFCBlock[];
         customBlocks: SFCCustomBlock[];
     }
 
-    export type SFCBlock = {
+    export interface SFCBlock {
         type: string;
         content: string;
-        start?: number;
-        end?: number;
+        start: number;
+        end: number;
         lang?: string;
         src?: string;
         scoped?: boolean;
         module?: string | boolean;
         attrs: {
-            [attribute:string]: string
+            [attribute: string]: string
         };
     }
 
-    export type SFCCustomBlock = {
+    export interface SFCCustomBlock {
         type: string;
         content: string;
-        start?: number;
-        end?: number;
+        start: number;
+        end: number;
         src?: string;
         attrs: {
-            [attribute:string]: string
+            [attribute: string]: string
         };
     }
 
