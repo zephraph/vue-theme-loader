@@ -15,11 +15,16 @@ export const parse = (source: string): SFCDescriptor =>
  * Note that whitespace is preserved for debugging purposes
  */
 export const removeStyleBlock = (source: string, styleDescriptor: SFCBlock): string => {
+  const isSelfClosing = styleDescriptor.end === undefined;
+
   const start = source.lastIndexOf('<', styleDescriptor.start - 1);
-  const end = source.indexOf('>', styleDescriptor.end);
+  const end = isSelfClosing
+    ? styleDescriptor.start
+    : source.indexOf('>', styleDescriptor.end);
   const lines = source.slice(start, end).split('\n').length;
+
   return source.substring(0, start)
-    + Array(lines).map(() => '').join('\n')
+    + '\n'.repeat(lines > 1 ? lines - 1 : isSelfClosing ? 1 : 0)
     + source.substring(end + 1, source.length);
 };
 

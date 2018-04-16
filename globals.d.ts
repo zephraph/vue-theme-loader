@@ -15,7 +15,7 @@ declare module 'vue-template-compiler' {
         type: string;
         content: string;
         start: number;
-        end: number;
+        end?: number;
         lang?: string;
         src?: string;
         scoped?: boolean;
@@ -29,7 +29,7 @@ declare module 'vue-template-compiler' {
         type: string;
         content: string;
         start: number;
-        end: number;
+        end?: number;
         src?: string;
         attrs: {
             [attribute: string]: string
